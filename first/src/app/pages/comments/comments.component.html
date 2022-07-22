@@ -1,0 +1,59 @@
+<body>
+    <div class="body">
+        <div role="main" class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="blog-posts single-post">
+                            <h3>
+                                <i class="fa fa-comments"></i>Comments</h3>
+                            <article *ngFor="let comment of comments" class="post post-large blog-single-post">
+                                <div class="post-image">
+                                    <div class="owl-carousel" data-plugin-options='{"items":1}'>
+                                        <div>
+                                            <div class="img-thumbnail">
+                                                <img class="img-responsive" src="img/blog/blog-image-1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="img-thumbnail">
+                                                <img class="img-responsive" src="img/blog/blog-image-2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-block post-comments clearfix">
+                                        <ul class="comments">
+                                            <li>
+                                                <div class="comment">
+                                                    <div class="img-thumbnail">
+                                                        <img class="avatar" alt="" src="img/avatar-2.jpg">
+                                                    </div>
+                                                    <div class="comment-block">
+                                                        <div class="comment-arrow"></div>
+                                                        <span class="comment-by">
+                                                            <strong>{{comment.name}}</strong>
+                                                            <span class="pull-right">
+                                                                <span>
+                                                                    <a href="#">
+                                                                        <i class="fa fa-reply"></i>
+                                                                        Reply</a>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <p> {{comment.body}} </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

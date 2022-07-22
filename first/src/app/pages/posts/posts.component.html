@@ -1,0 +1,45 @@
+<body>
+    <div class="body">
+        <div role="main" class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="blog-posts">
+                            <article *ngFor="let post of posts" class="post post-large">
+                                <div class="post-image">
+                                    <div class="owl-carousel" data-plugin-options='{"items":1}'>
+                                        <div>
+                                            <div class="img-thumbnail">
+                                                <img class="img-responsive" src="img/blog/blog-image-1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="img-thumbnail">
+                                                <img class="img-responsive" src="img/blog/blog-image-2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="img-thumbnail">
+                                                <img class="img-responsive" src="img/blog/blog-image-3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-date">
+                                    <span class="day"> {{post.date}} </span>
+                                </div>
+                                <div class="post-content">
+                                    <h2><a href="comments?id={{post.posts_id}}"> {{post.title}} </a></h2>
+                                    <p> {{post.body}} </p>
+                                    <div class="post-meta">
+                                        <span><i class="fa fa-user"></i> By <a href="#"> {{post.name}} </a> </span>
+                                        <span><i class="fa fa-tag"></i> <a href="#"> {{post.category}} </a></span>
+                                        <span><i class="fa fa-comments"></i> <a href="comments?id={{post.posts_id}}"> Comments</a></span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
